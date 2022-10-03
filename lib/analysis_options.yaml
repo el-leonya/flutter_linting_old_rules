@@ -13,7 +13,6 @@ linter:
   rules:
     # Errors
     - always_use_package_imports
-    - always_declare_return_types
     - avoid_dynamic_calls
     - avoid_empty_else
     - avoid_print
@@ -23,4 +22,15 @@ linter:
     - cancel_subscriptions
     - close_sinks
     - comment_references
-    
+    - diagnostic_describe_all_properties
+    - discarded_futures
+    - literal_only_boolean_expressions
+    - no_adjacent_strings_in_list
+    - test_types_in_equals
+    - throw_in_finally
+    # Style
+    - always_declare_return_types
+    - always_put_control_body_on_new_line
+    - always_put_required_named_parameters_first
+    - always_specify_types # from flutter style guide
+    - avoid_annotating_with_dynamic
