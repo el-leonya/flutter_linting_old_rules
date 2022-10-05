@@ -38,7 +38,7 @@ linter:
     - always_declare_return_types
     - always_put_control_body_on_new_line
     - always_put_required_named_parameters_first
-    - always_specify_types # from flutter style guide
+    # always_specify_types # from flutter style guide; https://github.com/dart-lang/linter/issues/1848
     - avoid_annotating_with_dynamic
     - avoid_bool_literals_in_conditional_expressions
     - avoid_catches_without_on_clauses
@@ -76,7 +76,7 @@ linter:
     - no_default_cases # experimental (?)
     - no_runtimeType_toString
     - noop_primitive_operations
-    # omit_local_variable_types # vs always_specify_types
+    - omit_local_variable_types # vs always_specify_types
     - one_member_abstracts # from dart style guide
     - only_throw_errors
     - package_api_docs
