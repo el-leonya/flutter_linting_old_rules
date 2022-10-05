@@ -63,7 +63,7 @@ linter:
     - avoid_void_async
     - cascade_invocations
     - cast_nullable_to_non_nullable # experimental as 2022
-    - combinators_ordering # exists?
+    # combinators_ordering # exists?
     - conditional_uri_does_not_exist
     - deprecated_consistency
     - directives_ordering
