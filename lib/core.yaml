@@ -7,6 +7,8 @@ analyzer:
     - dart_code_metrics
   exclude:
     - "build/**"
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
   language:
     strict-casts: true
     strict-raw-types: true
@@ -24,7 +26,6 @@ linter:
     - cancel_subscriptions
     - close_sinks
     - comment_references
-    # diagnostic_describe_all_properties # сreates a lot of code
     - discarded_futures
     - literal_only_boolean_expressions
     - no_adjacent_strings_in_list
@@ -128,3 +129,51 @@ linter:
     # Pub
     - secure_pubspec_urls
     - sort_pub_dependencies
+dart_code_metrics:
+  anti-patterns:
+    - long-method
+    - long-parameter-list
+  metrics:
+    cyclomatic-complexity: 20
+    maximum-nesting-level: 5
+    number-of-parameters: 4
+    source-lines-of-code: 50
+  metrics-exclude:
+    - test/**
+  rules:
+    - always-remove-listener
+    - newline-before-return
+    - no-boolean-literal-compare
+    - no-empty-block
+    - # prefer-trailing-comma # is already in the linter rules: require_trailing_commas
+    - prefer-conditional-expressions
+    - no-equal-then-else
+    - always-remove-listener
+    - member-ordering-extended:
+        alphabetize: true
+        order:
+          # Constructors
+          - constructors
+          - named-constructors
+          - factory-constructors
+          # Public
+          - public-static-const-fields
+          - public-static-final-fields
+          - public-static-fields
+          - public-final-fields
+          - public-fields
+          - public-getters-setters
+          - public-static-methods
+          - public-methods
+          # Private
+          - private-static-const-fields
+          - private-static-final-fields
+          - private-static-fields
+          - private-final-fields
+          - private-fields
+          - private-static-methods
+          - private-methods
+          - private-getters-setters
+          # Protected
+          - overridden-methods
+          - protected-methods

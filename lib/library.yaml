@@ -1,0 +1,6 @@
+include: package:flutter_linting_rules/core.yaml
+
+linter:
+  rules:
+    # Errors
+    - diagnostic_describe_all_properties
